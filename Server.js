@@ -7,8 +7,9 @@ import swaggerUiExpress from "swagger-ui-express";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import morgan from "morgan";
-import path from "path";
 import colors from "colors";
+import path from "path";
+import { fileURLToPath } from "url";
 import connectDb from "./config/dbConfig.js";
 import errorHandler from "./middleware/errorHandler.js";
 import authRoute from "./routes/authRoute.js";
@@ -16,6 +17,8 @@ import categoryRoute from "./routes/categoryRoute.js";
 import productRoute from "./routes/productRoute.js";
 
 // Setting
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const app = express();
 dotenv.config();
 const PORT = process.env.PORT || 8080;
@@ -59,9 +62,9 @@ app.use("/category", categoryRoute);
 app.use("/products", productRoute);
 app.use("/api-docs", swaggerUiExpress.serve, swaggerUiExpress.setup(specs));
 
-// Res Api
-app.use('*', function(req, res){
-  res.sendFile(path.join(__dirname, "./frontend/build/index.html"));
+// Rest Api
+app.use("*", (req, res) => {
+  res.sendFile(path.join(path.resolve(), "./frontend/build/index.html"));
 });
 
 // Server
