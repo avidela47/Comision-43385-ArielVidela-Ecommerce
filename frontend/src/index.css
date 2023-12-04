@@ -1,0 +1,807 @@
+@import url("https://fonts.googleapis.com/css2?family=Fuggles&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+font-family: 'Fuggles', cursive;
+font-family: 'Neuton', serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Poppins', sans-serif;
+*/
+
+/* Footer */
+footer {
+  background-color: rgb(255, 255, 255);
+}
+.footer-logo img {
+  width: 50%;
+  height: 50%;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.contact .i {
+  color: #2c2c2c;
+  font-size: 2rem;
+  padding: 1rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  text-align: center;
+  border-radius: 50%;
+  margin: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.contact .i:hover {
+  transform: translateY(-1rem);
+  z-index: 1;
+}
+
+span {
+  font-family: "Playfair Display", serif;
+}
+
+/* NavBar */
+.logo {
+  width: 30%;
+}
+
+.navbar {
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+  line-height: 10px;
+  letter-spacing: -1px;
+}
+
+.nav-link {
+  font-weight: 300 !important;
+  text-transform: capitalize;
+}
+
+.active {
+  border-bottom: 1px solid black;
+}
+
+/* Page Not Found */
+.pnf {
+  display: flex;
+  min-height: 65vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Playfair Display", serif;
+}
+
+.pnf-title {
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.pnf-heading {
+  font-weight: normal;
+}
+
+.pnf-btn {
+  color: black;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 50%;
+}
+.pnf-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Page Register */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  background-color: #fff;
+  padding: 17px;
+  border-radius: 20px;
+  position: relative;
+  margin: 0.5% 40%;
+  box-shadow: 4px 4px 4px 4px gray;
+  --webkit-box-shadow: 6px 6px 6px 6px gray;
+  border: solid gray !important;
+}
+
+.title {
+  font-size: 28px;
+  color: royalblue;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.title::before,
+.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: royalblue;
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+  background-color: royalblue;
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.title2 {
+  font-size: 21px;
+  color: royalblue;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.title2::before,
+.title2::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: royalblue;
+}
+
+.title2::before {
+  width: 18px;
+  height: 18px;
+  background-color: royalblue;
+}
+
+.title2::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.message,
+.signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a {
+  color: royalblue;
+}
+
+.signin a:hover {
+  text-decoration: underline royalblue;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form label .input:valid + span {
+  color: green;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  background-color: royalblue;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: 0.3s ease;
+}
+
+.submit:hover {
+  background-color: rgb(56, 90, 194);
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* Slider */
+
+.slider {
+  width: 100%;
+  height: 88vh;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-dark);
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: all 0.5s ease;
+}
+
+@media screen and (min-width: 600px) {
+  .slide img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.slide img {
+  height: 100%;
+}
+
+.content {
+  position: absolute;
+  text-align: center;
+  top: 23rem;
+  left: 50%;
+  opacity: 0;
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  animation: slide-up 1s ease 0.5s;
+  animation-fill-mode: forwards;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgb(23, 32, 90);
+}
+
+.content span,
+.content .span1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.content .span1:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0%;
+  width: 30%;
+  height: 2px;
+  background: #50dfdb;
+
+  animation: span1 3s linear infinite;
+}
+.content .span2:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  width: 30%;
+  height: 2px;
+  background: #50dfdb;
+  animation: span2 3s linear infinite;
+}
+.content .span3:before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 2px;
+  height: 30%;
+  background: #50dfdb;
+  animation: span3 3s linear infinite;
+}
+.content .span4:before {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  right: 0;
+  width: 2px;
+  height: 30%;
+  background: #50dfdb;
+  animation: span4 3s linear infinite;
+}
+
+@keyframes span1 {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes span2 {
+  0% {
+    right: 0%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+@keyframes span3 {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes span4 {
+  0% {
+    bottom: 0%;
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    visibility: visible;
+    top: 23rem;
+  }
+  100% {
+    visibility: visible;
+    top: 17rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    width: 80%;
+  }
+}
+
+.content > * {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.current {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.current .content {
+  opacity: 1;
+}
+.arrow {
+  border: 2px solid orangered;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.arrow:hover {
+  background: #fff;
+}
+
+.next {
+  right: 1.5rem;
+  color: orangered;
+}
+.prev {
+  left: 1.5rem;
+  color: orangered;
+}
+
+hr {
+  height: 2px;
+  background: #fff;
+  width: 50%;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Home info Box */
+
+.infoboxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+.infobox {
+  width: 23rem;
+  height: auto;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  display: flex;
+}
+
+.icon {
+  width: 35%;
+}
+
+h4 {
+  color: #aaa;
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
+.text {
+  color: #aaa;
+  font-size: 0.8rem;
+}
+
+/* Varios */
+
+.text-body {
+  text-decoration: none;
+  margin-right: 930px;
+}
+
+.form2 {
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+  background-color: #fff;
+  padding: 17px;
+  border-radius: 20px;
+  position: relative;
+  margin-left: 200px;
+  box-shadow: 4px 4px 4px 4px gray;
+  --webkit-box-shadow: 6px 6px 6px 6px gray;
+  border: solid gray !important;
+}
+
+.input2 {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.lead {
+  font-size: 10px;
+  font-family: "Playfair Display", serif;
+}
+
+.product-link {
+  text-decoration: none !important;
+  color: black !important;
+  font-family: "Playfair Display", serif;
+}
+
+.card-img-top {
+  height: 10vh;
+  width: 10vh;
+}
+
+.card2 {
+  height: 70vh;
+  width: 100vh;
+}
+
+.card3 {
+  height: 20vh;
+  width: 17vh;
+}
+
+.card-img-top1 {
+  height: 35vh;
+  width: 30vh;
+}
+
+
+
+.card-img-top2 {
+  height: 35vh;
+  width: 46vh;
+}
+
+.card {
+  font-family: "Playfair Display", serif;
+}
+
+.card-text3 {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+tr {
+  font-family: "Playfair Display", serif;
+}
+
+td {
+  font-family: "Playfair Display", serif;
+  font-size: 12px;
+}
+
+.container-fuid {
+  font-family: "Playfair Display", serif;
+}
+
+h1,
+h4,
+h3,
+h6,
+h5 {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+}
+
+.text-center {
+  font-family: "Playfair Display", serif;
+}
+
+.btn1 {
+  font-family: "Playfair Display", serif;
+  font-size: 12px;
+}
+
+.btn2 {
+  font-family: "Playfair Display", serif;
+  font-size: 12px;
+  margin-left: 40px;
+}
+
+.card-title2 {
+  font-size: 18px;
+  font-family: "Playfair Display", serif;
+}
+
+.card-title3 {
+  font-size: 15px;
+  font-family: "Playfair Display", serif;
+}
+
+.card-text2 {
+  font-size: 14px;
+  font-family: "Playfair Display", serif;
+}
+
+.card-text3 {
+  font-size: 14px;
+  font-family: "Playfair Display", serif;
+}
+
+.pagination {
+  font-family: "Playfair Display", serif;
+  margin-left: 700px;
+}
+
+.search {
+  margin-left: 565px;
+}
+
+.nav-link {
+  font-family: "Playfair Display", serif;
+}
+
+
+/*-- Card Client --*/
+
+/* before adding the photo to the div with the "card-photo" class, in the css clear the styles for .card-photo and remove .card-photo::before and .card-photo::after, then set the desired styles for .card- photo. */
+
+.card6 {
+  --font-color: #fefefe;
+  --font-color-sub: #ffffff;
+  --bg-color: #111;
+  --main-color: #fefefe;
+  width: 200px;
+  height: 300px;
+  background: var(--bg-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-family: "Playfair Display", serif;
+}
+
+.card-photo {
+/* clear and add new css */
+  transform: scale(0.3) translate(220px, 230px);
+  width: 250px;
+  height: 250px;
+  margin-left: -125px;
+  margin-top: -125px;
+  background: radial-gradient(circle,rgba(0,0,0,0.15) 50%,rgba(0,0,0,0) 50.8%) 14% 30%/11% 11%,radial-gradient(circle,#ffdab9 50%,rgba(255,218,185,0) 50.8%) 10% 30%/16% 16%,radial-gradient(circle,#8b4513 50%,rgba(139,69,19,0) 50.8%) 7.5% 29%/20% 20%,radial-gradient(circle,rgba(0,0,0,0.15) 50%,rgba(0,0,0,0) 50.8%) 86% 30%/11% 11%,radial-gradient(circle,#ffdab9 50%,rgba(255,218,185,0) 50.8%) 90% 30%/16% 16%,radial-gradient(circle,#8b4513 50%,rgba(139,69,19,0) 50.8%) 92.5% 29%/20% 20%,radial-gradient(circle at 50% 0,#ffdab9 29.5%,#8b4513 30%,#8b4513 35%,rgba(139,69,19,0) 35.5%) 50% 95%/40% 20%,radial-gradient(ellipse at 50% 100%,rgba(139,69,19,0) 49%,#8b4513 49.5%,#8b4513 52%,rgba(139,69,19,0) 52.5%) 50% 110%/120% 40%,radial-gradient(circle at 50% 0,rgba(255,255,255,0) 35%,white 35%,white 45%,rgba(255,255,255,0) 45.5%) 50% 89%/40% 13%,linear-gradient(#8b4513,#8b4513) 37% 100%/.25em 22%,linear-gradient(#8b4513,#8b4513) 63% 100%/.25em 22%,linear-gradient(80deg,rgba(0,0,0,0) 50%,#333 50.5%) 24% 100%/1em 18%,linear-gradient(-80deg,rgba(0,0,0,0) 50%,#333 50.5%) 76% 100%/1em 18%,linear-gradient(162deg,rgba(0,0,0,0) 10%,#333 10%) 30% 100%/1.5em 21%,linear-gradient(-162deg,rgba(0,0,0,0) 10%,#333 10%) 70% 100%/1.5em 21%,radial-gradient(ellipse at 100% 100%,#556b2f 50%,rgba(85,107,47,0) 50.5%) 0 100%/37% 29%,radial-gradient(ellipse at 0 100%,#556b2f 50%,rgba(85,107,47,0) 50.5%) 100% 100%/37% 29%,radial-gradient(ellipse at 50% 100%,#222 51%,rgba(0,0,0,0) 51.5%) 50% 110%/120% 40%,radial-gradient(circle at 50% 0,rgba(0,0,0,0.15) 40%,rgba(0,0,0,0) 40.5%) 50% 82%/20% 20%,linear-gradient(to right,#8b4513 4px,rgba(139,69,19,0) 4px) 50% 80%/20% 20%,linear-gradient(to left,#8b4513 4px,rgba(139,69,19,0) 4px) 50% 80%/20% 20%,linear-gradient(#ffdab9,#ffdab9) 50% 80%/20% 20%,linear-gradient(#48240a,#48240a) 50% 100%/65% 60%,radial-gradient(circle,white 30%,rgba(255,255,255,0) 62%) 50% 50%/100% 100%;
+  background-color: #ccc;
+  background-repeat: no-repeat;
+  border-radius: 30%;
+}
+
+/* delete */
+.card-photo::before {
+  display: block;
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  width: 160px;
+  height: 200px;
+  left: 50%;
+  top: -10%;
+  margin-left: -80px;
+  background: radial-gradient(circle at 50% 0,#ffdab9 30%,#8b4513 30.5%,#8b4513 41%,rgba(139,69,19,0) 41.5%) 50% 76%/2em 2em,radial-gradient(ellipse,rgba(139,69,19,0) 25%,#5e2f0d 25.5%,#5e2f0d 40%,rgba(139,69,19,0) 40.5%) 50% 100%/100% 40%,radial-gradient(ellipse at 50% 0,#8b4513 40%,#ffdab9 40.5%,#ffdab9 58%,rgba(255,218,185,0) 59%) 50% 83%/3em 1em,linear-gradient(#5e2f0d,#5e2f0d) 50% 86%/1em 1em,radial-gradient(circle,#5e2f0d 40%,rgba(139,69,19,0) 40.5%) 26% 56%/1em 1em,radial-gradient(circle,#5e2f0d 40%,rgba(139,69,19,0) 40.5%) 74% 56%/1em 1em,radial-gradient(ellipse,rgba(139,69,19,0) 52%,#8b4513 52.5%,#8b4513 55%,rgba(139,69,19,0) 55.5%) 50% 100%/150% 80%,radial-gradient(ellipse,rgba(0,0,0,0) 46%,rgba(0,0,0,0.15) 46.5%,rgba(0,0,0,0.15) 53%,rgba(0,0,0,0) 53%) 50% 100%/150% 80%,radial-gradient(ellipse,#ffdab9 53%,rgba(255,218,185,0) 53.5%) 50% 100%/150% 80%,radial-gradient(ellipse at 50% 100%,rgba(139,69,19,0) 35.5%,#8b4513 36%,#8b4513 38%,white 38.5%) 50% -45%/110% 60%,radial-gradient(circle,#444 23%,rgba(0,0,0,0) 24%) 30% 26%/1em 1em,radial-gradient(circle,#444 23%,rgba(0,0,0,0) 24%) 40% 25%/1em 1em,radial-gradient(circle,#444 23%,rgba(0,0,0,0) 24%) 50% 24.5%/1em 1em,radial-gradient(circle,#444 23%,rgba(0,0,0,0) 24%) 60% 25%/1em 1em,radial-gradient(circle,#444 23%,rgba(0,0,0,0) 24%) 70% 26%/1em 1em,radial-gradient(ellipse,#666 63%,#8b4513 63.5%,#8b4513 66%,rgba(139,69,19,0) 66.5%) 50% 100%/150% 80%,radial-gradient(ellipse,rgba(139,69,19,0) 40%,#5e2f0d 40.5%) 50% 0/150% 80%,linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)) 50% 50%/100% 100%;
+  background-repeat: no-repeat;
+  background-color: #ffdab9;
+  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  border: 4px solid #8b4513;
+  box-shadow: inset 0 -.2em 0 .5em rgba(0,0,0,0.15),inset 0 -1.6em 0 #5e2f0d;
+}
+
+/* delete */
+.card-photo::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 2.5em;
+  height: .8em;
+  left: 28.5%;
+  top: 26%;
+  background-color: #5e2f0d;
+  border-radius: .3em;
+  box-shadow: 4.2em 0 0 #5e2f0d;
+}
+
+.card-title {
+  text-align: center;
+  color: var(--font-color);
+  font-size: 20px;
+  font-weight: 400;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.card-title span {
+  font-size: 15px;
+  color: var(--font-color-sub);
+}
+
+.card-socials {
+  display: flex;
+  height: 0;
+  opacity: 0;
+  margin-top: 20px;
+  gap: 20px;
+  transition: 0.5s;
+}
+
+.card-socials-btn {
+  width: 25px;
+  height: 25px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.card-socials-btn svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--main-color);
+}
+
+.card:hover > .card-socials {
+  opacity: 1;
+  height: 35px;
+}
+
+.card-socials-btn:hover {
+  transform: translateY(-5px);
+  transition: all 0.15s;
+}
+
+.card-photo:hover {
+  transition: 0.3s;
+  transform: scale(0.4) translate(160px, 150px);
+}
+
+/* Cart */
+
+@media (min-width: 1025px) {
+  .h-custom {
+  height: 100vh !important;
+  }
+  }
+
+
