@@ -4,15 +4,9 @@
 
 Ariel Videla
 
-### Poyecto
-Ecommerce Horus Santeria
-BackEnd: Express, Node Js
-FrontEnd: React Js
-Base de datos: Mongo db
-
 Clonar el ropositorio
 ```sh
-https://github.com/avidela47/Comision-43385-ArielVidela-Ecommerce.git
+https://*******
 ```
 Correr la aplicación en modo desarrollo
 ```sh

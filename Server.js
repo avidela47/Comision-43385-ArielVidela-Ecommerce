@@ -15,7 +15,6 @@ import categoryRoute from "./routes/categoryRoute.js";
 import productRoute from "./routes/productRoute.js";
 
 // Setting
-const publicRoot = './public';
 const app = express();
 dotenv.config();
 const PORT = process.env.PORT || 8080;
@@ -51,7 +50,6 @@ app.use(
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
-app.use(express.static(publicRoot));
 
 // Routes
 app.use("/auth", authRoute);
