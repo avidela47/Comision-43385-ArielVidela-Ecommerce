@@ -6,7 +6,7 @@ Ariel Videla
 
 Clonar el ropositorio
 ```sh
-https://*******
+https://github.com/avidela47/Comision-43385-ArielVidela-Ecommerce.git
 ```
 Correr la aplicación en modo desarrollo
 ```sh
