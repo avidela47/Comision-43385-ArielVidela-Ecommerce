@@ -8,7 +8,6 @@ import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import morgan from "morgan";
 import colors from "colors";
-import path from "path";
 import connectDb from "./config/dbConfig.js";
 import errorHandler from "./middleware/errorHandler.js";
 import authRoute from "./routes/authRoute.js";
@@ -44,7 +43,7 @@ app.use(morgan("dev"));
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(errorHandler);
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
     origin: ["http://localhost:3000"],
@@ -59,11 +58,6 @@ app.use("/auth", authRoute);
 app.use("/category", categoryRoute);
 app.use("/products", productRoute);
 app.use("/api-docs", swaggerUiExpress.serve, swaggerUiExpress.setup(specs));
-
-// Rest Api
-app.use("*", (req, res) => {
-  res.sendFile(path.join(path.resolve(), "./frontend/build/index.html"));
-});
 
 // Server
 const httpServer = app.listen(PORT, async () => {
